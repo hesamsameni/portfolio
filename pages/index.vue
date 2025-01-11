@@ -1,7 +1,11 @@
 <template>
   <div>
-    <h1>Home Page</h1>
-    <p>My first Nuxt.js app</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus,
+      assumenda laudantium ipsum inventore nihil quidem quo sint nulla culpa,
+      doloremque perspiciatis delectus id, iure maxime dolorum eveniet sapiente
+      ad omnis!
+    </p>
   </div>
 </template>
 
