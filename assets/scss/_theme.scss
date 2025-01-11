@@ -1,4 +1,15 @@
-body {
-  background-color: $color-dark-bg;
-  color: $color-dark-text;
+// _theme.scss
+
+html.light-mode {
+  body {
+    background-color: $color-light-bg;
+    color: $color-light-text;
+  }
+}
+
+html.dark-mode {
+  body {
+    background-color: $color-dark-bg;
+    color: $color-dark-text;
+  }
 }

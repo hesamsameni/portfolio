@@ -1,13 +1,14 @@
 #jobs {
+  // Default styles for dark mode
   li {
     border: 1px solid $color-dark-muted;
   }
 
   .skills {
-    color: $color-light-text;
+    color: $color-dark-text;
 
     span {
-      background-color: $color-light-bg;
+      background-color: $color-light-muted;
     }
   }
 
@@ -21,6 +22,35 @@
 
       span {
         background-color: $color-dark-bg;
+      }
+    }
+  }
+
+  // Light mode styles
+  html.light-mode & {
+    li {
+      border: 1px solid $color-light-muted;
+    }
+
+    .skills {
+      color: $color-light-text;
+
+      span {
+        background-color: $color-dark-text;
+      }
+    }
+
+    .current-job {
+      background-color: $color-accent-light;
+      color: $color-dark-text;
+      border: 1px solid $color-accent-light;
+
+      .skills {
+        color: $color-light-text;
+
+        span {
+          background-color: $color-light-bg;
+        }
       }
     }
   }
