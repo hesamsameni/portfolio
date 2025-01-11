@@ -1,5 +1,5 @@
 <template>
-  <nav class="font-mono pr-5">
+  <nav class="font-mono pr-5 pl-10">
     <ul class="flex space-x-4">
       <li>
         <nuxt-link to="/blog" class="link">Blog</nuxt-link>

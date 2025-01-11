@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <h1>Blogs list</h1>
-  </div>
+  <article>
+    <ContentDoc />
+  </article>
 </template>
 
 <script setup>
