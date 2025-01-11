@@ -1,0 +1,27 @@
+#jobs {
+  li {
+    border: 1px solid $color-dark-muted;
+  }
+
+  .skills {
+    color: $color-light-text;
+
+    span {
+      background-color: $color-light-bg;
+    }
+  }
+
+  .current-job {
+    background-color: $color-accent-dark;
+    color: $color-light-text;
+    border: 1px solid $color-accent-dark;
+
+    .skills {
+      color: $color-dark-text;
+
+      span {
+        background-color: $color-dark-bg;
+      }
+    }
+  }
+}
