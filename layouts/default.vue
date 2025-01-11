@@ -5,7 +5,7 @@
         <div class="hidden md:block">
           <NuxtLink
             to="/"
-            class="text-xl font-semibold p-2 hover:bg-gray-200 dark:hover:bg-gray-800"
+            class="text-xl font-semibold p-2 hover:bg-gray-200 dark:hover:bg-gray-700"
             >Hesam Sameni
           </NuxtLink>
         </div>
