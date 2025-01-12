@@ -1,3 +1,31 @@
+---
+title: "The Ultimate Guide to Xbox Game Pass: Why It's a Gamer's Best Friend"
+description: "The Ultimate Guide to Xbox Game Pass: Why It's a Gamer's Best Friend"
+author: "Hesam Sameni"
+date: "2025-01-11"
+tags: ["xbox", "gamepass", "gaming", "steam"]
+head:
+  meta:
+    - name: "keywords"
+      content: "xbox, gamepass, gaming, steam"
+    - name: "robots"
+      content: "index, follow"
+    - name: "author"
+      content: "Hesam Sameni"
+    - name: "og:title"
+      content: "The Ultimate Guide to Xbox Game Pass: Why It's a Gamer's Best Friend"
+    - name: "og:description"
+      content: "The Ultimate Guide to Xbox Game Pass: Why It's a Gamer's Best Friend"
+    - name: "og:url"
+      content: "http://hesamsameni.com/blog/2025/the-ultimate-guide-to-xbox-game-pass-why-its-a-gamers-best-friend"
+    - name: "twitter:title"
+      content: "The Ultimate Guide to Xbox Game Pass: Why It's a Gamer's Best Friend"
+    - name: "twitter:description"
+      content: "The Ultimate Guide to Xbox Game Pass: Why It's a Gamer's Best Friend"
+    - name: "twitter:card"
+      content: "summary"
+---
+
 # The Ultimate Guide to Xbox Game Pass: Why It's a Gamer's Best Friend
 
 ![Placeholder for Diagram: SSR vs CSR illustration](/images/xbox.png)
