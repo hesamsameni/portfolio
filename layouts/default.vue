@@ -5,8 +5,9 @@
         <div>
           <NuxtLink
             to="/"
-            class="text-md font-semibold hover:bg-gray-200 dark:hover:bg-gray-700 md:text-xl"
-            >Hesam Sameni
+            class="text-sm font-semibold hover:bg-gray-200 dark:hover:bg-gray-700 md:text-xl"
+          >
+            Hesam Sameni
           </NuxtLink>
         </div>
 
