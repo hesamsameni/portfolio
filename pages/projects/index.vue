@@ -108,12 +108,22 @@ const projects = [
   },
   {
     id: 5,
+    name: "Roomie",
+    description:
+      "Expense tracker for roommates and couples to manage shared bills and expenses.",
+    year: "2025",
+    stack: ["Nuxt", "Nodejs", "Supabase"],
+    github: "https://github.com/hesamsameni/roomie-app",
+    live: "https://www.roomie-app.site/",
+  },
+  {
+    id: 6,
     name: "Portfolio",
     description: "Personal portfolio site built with Nuxt.js and Tailwind CSS.",
     year: "2024",
     stack: ["Nuxt.js", "Vue.js", "TypeScript", "Tailwind CSS"],
     github: "https://github.com/hesamsameni/portfolio",
-    live: "https://portfolio-liard-pi-52.vercel.app/",
+    live: "https://hesamsameni.site/",
   },
 ];
 </script>
