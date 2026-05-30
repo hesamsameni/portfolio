@@ -1,11 +1,12 @@
 <template>
-  <section id="jobs">
+  <section>
+    <p class="text-xs font-mono uppercase tracking-widest opacity-30 mb-8">
+      Experience
+    </p>
     <jobs-list />
   </section>
 </template>
 
 <script setup>
-useHead({
-  titleTemplate: "Jobs Page",
-});
+useHead({ titleTemplate: "Experience — Hesam Sameni" });
 </script>

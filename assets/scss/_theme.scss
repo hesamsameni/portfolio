@@ -1,15 +1,37 @@
 // _theme.scss
 
+html {
+  background-color: $color-dark-bg;
+  color: $color-dark-text;
+  transition:
+    background-color $transition-medium,
+    color $transition-medium;
+}
+
 html.light-mode {
-  body {
-    background-color: $color-light-bg;
-    color: $color-light-text;
-  }
+  background-color: $color-light-bg;
+  color: $color-light-text;
 }
 
 html.dark-mode {
-  body {
-    background-color: $color-dark-bg;
-    color: $color-dark-text;
+  background-color: $color-dark-bg;
+  color: $color-dark-text;
+}
+
+// Utility: theme-aware border
+.theme-border {
+  border-color: $color-dark-border;
+
+  html.light-mode & {
+    border-color: $color-light-border;
+  }
+}
+
+// Utility: theme-aware muted text
+.text-muted {
+  color: $color-dark-muted;
+
+  html.light-mode & {
+    color: $color-light-muted;
   }
 }
