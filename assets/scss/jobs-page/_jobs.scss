@@ -1,57 +1,30 @@
-#jobs {
-  // Default styles for dark mode
-  li {
-    border: 1px solid $color-dark-muted;
-  }
+.skill-tag {
+  border: 1px solid $color-dark-border;
+  color: $color-dark-muted;
+  border-radius: 3px;
+  font-family: inherit;
+  transition:
+    border-color $transition-fast,
+    color $transition-fast;
 
-  .skills {
-    color: $color-dark-text;
-
-    span {
-      background-color: $color-light-muted;
-    }
-  }
-
-  .current-job {
-    background-color: $color-accent-dark;
-    color: $color-light-text;
-    border: 1px solid $color-accent-dark;
-
-    .skills {
-      color: $color-dark-text;
-
-      span {
-        background-color: $color-dark-bg;
-      }
-    }
-  }
-
-  // Light mode styles
   html.light-mode & {
-    li {
-      border: 1px solid $color-light-muted;
-    }
+    border-color: $color-light-border;
+    color: $color-light-muted;
+  }
+}
 
-    .skills {
-      color: $color-light-text;
+.job-divider {
+  border-color: $color-dark-border;
 
-      span {
-        background-color: $color-dark-text;
-      }
-    }
+  html.light-mode & {
+    border-color: $color-light-border;
+  }
+}
 
-    .current-job {
-      background-color: $color-accent-light;
-      color: $color-dark-text;
-      border: 1px solid $color-accent-light;
+.current-dot {
+  background-color: $color-dark-accent;
 
-      .skills {
-        color: $color-light-text;
-
-        span {
-          background-color: $color-light-bg;
-        }
-      }
-    }
+  html.light-mode & {
+    background-color: $color-light-accent;
   }
 }

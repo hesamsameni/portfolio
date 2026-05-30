@@ -1,40 +1,86 @@
 <template>
-  <div v-if="pending">Loading...</div>
-  <div v-else-if="error">Something went wrong</div>
-  <div v-else>
-    <ul class="grid grid-cols-1 gap-4">
-      <li
-        v-for="job in jobs"
-        :key="job.id"
-        class="rounded-sm p-4 font-mono job"
-        :class="{ 'current-job': job.end_date === 'Present' }"
-      >
-        <div v-if="job.end_date === 'Present'" class="font-bold">
-          Current Job
-        </div>
-        <div class="flex items-center justify-between text-sm">
-          <div class="font-semibold">{{ job.company }}</div>
-          <div>{{ job.position }}</div>
-        </div>
-
-        <p class="text-sm">
-          {{ job.duration }}
-        </p>
-        <div class="skills mt-5">
+  <ul class="space-y-8">
+    <li v-for="(job, index) in jobs" :key="job.id">
+      <div class="flex items-start gap-4">
+        <div class="pt-1.5 flex-shrink-0">
           <span
-            v-for="skill in job.skills"
-            :key="skill"
-            class="inline-block rounded-full px-2 py-1 text-xs font-semibold mr-2"
-          >
-            {{ skill }}
-          </span>
+            class="block w-1.5 h-1.5 rounded-full"
+            :class="
+              job.end_date === 'Present'
+                ? 'current-dot'
+                : 'opacity-20 bg-current'
+            "
+          />
         </div>
-      </li>
-    </ul>
-  </div>
+        <div class="flex-1 min-w-0">
+          <div
+            class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5 mb-1"
+          >
+            <div class="text-sm">
+              <span class="font-semibold">{{ job.company }}</span>
+              <span class="opacity-30 mx-1.5">/</span>
+              <span class="opacity-60">{{ job.position }}</span>
+            </div>
+            <div class="font-mono text-xs opacity-30 flex-shrink-0">
+              {{ job.start_date }} &mdash; {{ job.end_date }}
+            </div>
+          </div>
+          <p class="font-mono text-xs opacity-30 mb-3">
+            {{
+              job.end_date === "Present"
+                ? computeDuration(job.start_date)
+                : job.duration
+            }}
+          </p>
+          <div class="flex flex-wrap gap-1.5">
+            <span
+              v-for="skill in job.skills"
+              :key="skill"
+              class="skill-tag text-xs px-2 py-0.5"
+            >
+              {{ skill }}
+            </span>
+          </div>
+        </div>
+      </div>
+      <hr v-if="index < jobs.length - 1" class="job-divider mt-8 border-t" />
+    </li>
+  </ul>
 </template>
 
 <script setup>
+const monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+function computeDuration(startDateStr) {
+  const [monthName, year] = startDateStr.split(" ");
+  const startMonth = monthNames.indexOf(monthName);
+  const startYear = parseInt(year, 10);
+  const now = new Date();
+  const endMonth = now.getMonth();
+  const endYear = now.getFullYear();
+
+  let months = (endYear - startYear) * 12 + (endMonth - startMonth);
+  const years = Math.floor(months / 12);
+  months = months % 12;
+
+  if (years === 0) return `${months} month${months !== 1 ? "s" : ""}`;
+  if (months === 0) return `${years} year${years !== 1 ? "s" : ""}`;
+  return `${years} year${years !== 1 ? "s" : ""}, ${months} month${months !== 1 ? "s" : ""}`;
+}
+
 const jobs = [
   {
     id: 1,
